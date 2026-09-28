@@ -1,0 +1,83 @@
+name: User Story
+description: The template is for creating user stories
+title: User Story
+labels:
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting an issue. Please complete the user story and acceptance criteria below.
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      description: What kind of request is this?
+      options:
+        - Feature
+        - Improvement
+        - Bug
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: As a
+      description: Identify the user or role making the request
+      placeholder: e.g. administrator
+    validations:
+      required: true
+
+  - type: input
+    id: function
+    attributes:
+      label: I need
+      description: Describe the function or capability needed
+      placeholder: e.g. to export user data
+    validations:
+      required: true
+
+  - type: input
+    id: benefit
+    attributes:
+      label: So that
+      description: Explain the benefit or desired outcome
+      placeholder: e.g. I can analyze it in another system
+    validations:
+      required: true
+
+  - type: textarea
+    id: details_assumptions
+    attributes:
+      label: Details and Assumptions
+      description: Document what is known, including relevant context, constraints, and assumptions
+      placeholder: |
+        - Document what you know
+        - List relevant assumptions
+        - Include constraints or dependencies
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the expected behavior using Given/When/Then scenarios
+      value: |
+        Given [some context]
+        When [certain action is taken]
+        Then [the outcome of action is observed]
+      render: gherkin
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, links, related issues, or any other useful information
+      placeholder: Add any additional information here
